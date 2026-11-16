@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftData
 
 @main
-struct JijianBookApp: App {
+struct LSSApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()

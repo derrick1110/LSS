@@ -1,11 +1,11 @@
 import XCTest
-@testable import JijianBook
+@testable import LSS
 
 final class RecordURLParserTests: XCTestCase {
     private let parser = RecordURLParser()
 
     func testParsesDefaultFoodShortcutRecord() throws {
-        let url = try XCTUnwrap(URL(string: "jijianbook://record?amount=12.5"))
+        let url = try XCTUnwrap(URL(string: "lss://record?amount=12.5"))
 
         let request = try parser.parse(url).get()
 
@@ -15,7 +15,7 @@ final class RecordURLParserTests: XCTestCase {
     }
 
     func testParsesDailyCategory() throws {
-        let url = try XCTUnwrap(URL(string: "jijianbook://record?amount=8&category=daily"))
+        let url = try XCTUnwrap(URL(string: "lss://record?amount=8&category=daily"))
 
         let request = try parser.parse(url).get()
 
@@ -24,7 +24,7 @@ final class RecordURLParserTests: XCTestCase {
     }
 
     func testInvalidCategoryFallsBackToFood() throws {
-        let url = try XCTUnwrap(URL(string: "jijianbook://record?amount=9&category=bad"))
+        let url = try XCTUnwrap(URL(string: "lss://record?amount=9&category=bad"))
 
         let request = try parser.parse(url).get()
 
@@ -32,19 +32,19 @@ final class RecordURLParserTests: XCTestCase {
     }
 
     func testMissingAmountFails() throws {
-        let url = try XCTUnwrap(URL(string: "jijianbook://record"))
+        let url = try XCTUnwrap(URL(string: "lss://record"))
 
         XCTAssertEqual(parser.parse(url), .failure(.missingAmount))
     }
 
     func testInvalidAmountFails() throws {
-        let url = try XCTUnwrap(URL(string: "jijianbook://record?amount=abc"))
+        let url = try XCTUnwrap(URL(string: "lss://record?amount=abc"))
 
         XCTAssertEqual(parser.parse(url), .failure(.invalidAmount))
     }
 
     func testZeroAmountFails() throws {
-        let url = try XCTUnwrap(URL(string: "jijianbook://record?amount=0"))
+        let url = try XCTUnwrap(URL(string: "lss://record?amount=0"))
 
         XCTAssertEqual(parser.parse(url), .failure(.nonPositiveAmount))
     }

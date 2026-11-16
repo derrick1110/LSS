@@ -44,7 +44,7 @@ MVP 不包含：
 1. 用户付款完成。
 2. 用户从锁屏、控制中心或主屏触发快捷指令。
 3. 快捷指令弹出输入框，要求输入本次消费金额。
-4. 快捷指令打开 URL：`jijianbook://record?amount=12.5`。
+4. 快捷指令打开 URL：`lss://record?amount=12.5`。
 5. App 被唤醒并解析 URL。
 6. App 校验金额。
 7. App 创建支出记录，默认分类为餐饮。
@@ -133,7 +133,7 @@ other -> 其他
 App 注册 URL Scheme：
 
 ```text
-jijianbook://record
+lss://record
 ```
 
 MVP 支持参数：
@@ -147,8 +147,8 @@ source=shortcut 可选，默认 shortcut
 示例：
 
 ```text
-jijianbook://record?amount=12.5
-jijianbook://record?amount=8&category=daily
+lss://record?amount=12.5
+lss://record?amount=8&category=daily
 ```
 
 解析规则：
@@ -191,8 +191,8 @@ URL 缺少 `amount`：
 
 URL Scheme 测试：
 
-- `jijianbook://record?amount=12.5` 能新增餐饮记录。
-- `jijianbook://record?amount=8&category=daily` 能新增日用记录。
+- `lss://record?amount=12.5` 能新增餐饮记录。
+- `lss://record?amount=8&category=daily` 能新增日用记录。
 - `amount=0` 不新增记录，并进入补记页。
 - `amount=abc` 不新增记录，并进入补记页。
 - `category=bad` 能新增餐饮记录。

@@ -59,7 +59,7 @@ struct RecordURLParser {
     }
 
     private func isRecordRoute(_ url: URL) -> Bool {
-        url.scheme == "jijianbook" && (url.host == "record" || url.path.trimmingCharacters(in: CharacterSet(charactersIn: "/")) == "record")
+        url.scheme == "lss" && (url.host == "record" || url.path.trimmingCharacters(in: CharacterSet(charactersIn: "/")) == "record")
     }
 }
 

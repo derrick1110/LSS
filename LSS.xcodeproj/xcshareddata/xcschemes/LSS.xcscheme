@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1A0000010000000000000300"
-               BuildableName = "JijianBook.app"
-               BlueprintName = "JijianBook"
-               ReferencedContainer = "container:JijianBook.xcodeproj">
+               BuildableName = "LSS.app"
+               BlueprintName = "LSS"
+               ReferencedContainer = "container:LSS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -30,9 +30,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1A0000010000000000000301"
-               BuildableName = "JijianBookTests.xctest"
-               BlueprintName = "JijianBookTests"
-               ReferencedContainer = "container:JijianBook.xcodeproj">
+               BuildableName = "LSSTests.xctest"
+               BlueprintName = "LSSTests"
+               ReferencedContainer = "container:LSS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -48,9 +48,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1A0000010000000000000301"
-               BuildableName = "JijianBookTests.xctest"
-               BlueprintName = "JijianBookTests"
-               ReferencedContainer = "container:JijianBook.xcodeproj">
+               BuildableName = "LSSTests.xctest"
+               BlueprintName = "LSSTests"
+               ReferencedContainer = "container:LSS.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1A0000010000000000000300"
-            BuildableName = "JijianBook.app"
-            BlueprintName = "JijianBook"
-            ReferencedContainer = "container:JijianBook.xcodeproj">
+            BuildableName = "LSS.app"
+            BlueprintName = "LSS"
+            ReferencedContainer = "container:LSS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -87,9 +87,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1A0000010000000000000300"
-            BuildableName = "JijianBook.app"
-            BlueprintName = "JijianBook"
-            ReferencedContainer = "container:JijianBook.xcodeproj">
+            BuildableName = "LSS.app"
+            BlueprintName = "LSS"
+            ReferencedContainer = "container:LSS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

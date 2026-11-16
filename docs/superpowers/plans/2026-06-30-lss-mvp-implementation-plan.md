@@ -2,13 +2,13 @@
 
 日期：2026-06-30
 
-对应规格：`docs/superpowers/specs/2026-06-30-jijian-book-mvp-design.md`
+对应规格：`docs/superpowers/specs/2026-06-30-lss-mvp-design.md`
 
 ## 前提
 
 目标平台为 iOS 17+。实现采用 SwiftUI + SwiftData，本地离线存储，不做账号、云同步、预算、OCR 和通知正文读取。
 
-当前目录尚未包含 Xcode 工程。第一步需要创建 iOS App 工程，产品名使用“极简记账”，内部英文标识建议使用 `JijianBook`。
+当前目录尚未包含 Xcode 工程。第一步需要创建 iOS App 工程，产品名使用“极简记账”，内部英文标识建议使用 `LSS`。
 
 ## 阶段 1：创建工程骨架
 
@@ -21,13 +21,13 @@
 3. 启用 SwiftUI 生命周期。
 4. 引入 SwiftData model container。
 5. 配置 App Display Name 为“极简记账”。
-6. 注册 URL Scheme：`jijianbook`。
+6. 注册 URL Scheme：`lss`。
 
 验收：
 
 - App 能在模拟器启动。
 - 默认页面能正常显示。
-- `Info.plist` 或 target 配置中包含 `jijianbook` URL Scheme。
+- `Info.plist` 或 target 配置中包含 `lss` URL Scheme。
 
 ## 阶段 2：实现数据模型
 
@@ -63,7 +63,7 @@
 
 ## 阶段 3：实现 URL Scheme 解析与落库
 
-目标：App 能通过 `jijianbook://record?amount=12.5` 自动新增记录。
+目标：App 能通过 `lss://record?amount=12.5` 自动新增记录。
 
 任务：
 
@@ -88,8 +88,8 @@
 
 验收：
 
-- 打开 `jijianbook://record?amount=12.5` 后新增餐饮记录。
-- 打开 `jijianbook://record?amount=8&category=daily` 后新增日用记录。
+- 打开 `lss://record?amount=12.5` 后新增餐饮记录。
+- 打开 `lss://record?amount=8&category=daily` 后新增日用记录。
 - `amount=0`、`amount=abc`、缺少 `amount` 时不新增记录。
 - 非法分类仍可新增餐饮记录。
 
@@ -157,7 +157,7 @@
 1. 在文档中新增快捷指令创建步骤。
 2. 步骤包括：
    - 添加“询问输入”动作，提示“本次消费金额”。
-   - 添加“URL”动作，内容为 `jijianbook://record?amount=输入结果`。
+   - 添加“URL”动作，内容为 `lss://record?amount=输入结果`。
    - 添加“打开 URL”动作。
 3. 说明可将快捷指令放到锁屏、控制中心或主屏。
 
@@ -180,13 +180,13 @@
 
 建议测试用例：
 
-- `jijianbook://record?amount=12.5`
-- `jijianbook://record?amount=8&category=daily`
-- `jijianbook://record?amount=6&category=other`
-- `jijianbook://record?amount=abc`
-- `jijianbook://record?amount=0`
-- `jijianbook://record`
-- `jijianbook://record?amount=9&category=bad`
+- `lss://record?amount=12.5`
+- `lss://record?amount=8&category=daily`
+- `lss://record?amount=6&category=other`
+- `lss://record?amount=abc`
+- `lss://record?amount=0`
+- `lss://record`
+- `lss://record?amount=9&category=bad`
 
 最终验收：
 

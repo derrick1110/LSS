@@ -15,7 +15,7 @@
    - URL 内容填：
 
 ```text
-jijianbook://record?amount=快捷指令输入
+lss://record?amount=快捷指令输入
 ```
 
 5. 添加动作“打开 URL”。
@@ -33,8 +33,8 @@ jijianbook://record?amount=快捷指令输入
 MVP 默认分类是餐饮。如需测试其他分类，可以手动改 URL：
 
 ```text
-jijianbook://record?amount=12.5&category=daily
-jijianbook://record?amount=12.5&category=other
+lss://record?amount=12.5&category=daily
+lss://record?amount=12.5&category=other
 ```
 
 分类参数：

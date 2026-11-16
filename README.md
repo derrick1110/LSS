@@ -4,7 +4,7 @@
 
 ## 功能
 
-- 通过 URL Scheme 快速记账：`jijianbook://record?amount=12.5`
+- 通过 URL Scheme 快速记账：`lss://record?amount=12.5`
 - 快捷指令入账默认分类为餐饮
 - 固定三类：餐饮、日用、其他
 - 今日页展示今日总额、分类占比和流水列表
@@ -27,14 +27,14 @@
 最小 URL 示例：
 
 ```text
-jijianbook://record?amount=12.5
+lss://record?amount=12.5
 ```
 
 可选分类：
 
 ```text
-jijianbook://record?amount=8&category=daily
-jijianbook://record?amount=6&category=other
+lss://record?amount=8&category=daily
+lss://record?amount=6&category=other
 ```
 
 ## 打开工程
@@ -42,20 +42,20 @@ jijianbook://record?amount=6&category=other
 在 macOS 上使用 Xcode 打开：
 
 ```bash
-open JijianBook.xcodeproj
+open LSS.xcodeproj
 ```
 
 或者运行测试：
 
 ```bash
 xcodebuild test \
-  -project JijianBook.xcodeproj \
-  -scheme JijianBook \
+  -project LSS.xcodeproj \
+  -scheme LSS \
   -destination 'platform=iOS Simulator,name=iPhone 16' \
   CODE_SIGNING_ALLOWED=NO
 ```
 
 ## 文档
 
-- [MVP 设计](docs/superpowers/specs/2026-06-30-jijian-book-mvp-design.md)
-- [实施计划](docs/superpowers/plans/2026-06-30-jijian-book-mvp-implementation-plan.md)
+- [MVP 设计](docs/superpowers/specs/2026-06-30-lss-mvp-design.md)
+- [实施计划](docs/superpowers/plans/2026-06-30-lss-mvp-implementation-plan.md)
